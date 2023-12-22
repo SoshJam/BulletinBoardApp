@@ -2,6 +2,7 @@
 import pygame
 
 # Import classes
+from board import *
 
 # Other imports
 import sys
@@ -14,6 +15,7 @@ def main():
     pygame.display.set_caption("Bulletin Board - New Board")
 
     # Program Variables
+    board = Board("C:\\Users\\soshj\\OneDrive\\Desktop\\ProductivityApp\\example_board.brd")
 
     # Main program loop
     while True:
