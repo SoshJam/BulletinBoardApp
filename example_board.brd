@@ -15,9 +15,9 @@
             "type": "todo",
             "data": {
                 "todo": [
-                    (True, "Finished 1"),
-                    (True, "Finished 2"),
-                    (False, "Unfinished")
+                    ["Finished 1", true],
+                    ["Finished 2", true],
+                    ["Unfinished", false]
                 ]
             }
         }
