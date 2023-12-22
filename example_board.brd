@@ -1,0 +1,25 @@
+{
+    "title": "Example Board",
+    "items": [
+        {
+            "x": 100,
+            "y": 50,
+            "type": "item",
+            "data": {
+                "text": "This is an example item."
+            }
+        },
+        {
+            "x": 210,
+            "y": 65,
+            "type": "todo",
+            "data": {
+                "todo": [
+                    (True, "Finished 1"),
+                    (True, "Finished 2"),
+                    (False, "Unfinished")
+                ]
+            }
+        }
+    ]
+}
