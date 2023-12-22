@@ -2,6 +2,9 @@ import pygame
 
 # Base item class
 class Item:
+    # Setup for text
+    font = pygame.font.SysFont("Arial", 12)
+
     # Item info
     x = 0
     y = 0
@@ -19,3 +22,43 @@ class Item:
 
         pygame.draw.rect(screen, (0, 0, 0), (self.x - 2, self.y - 2), (width + 4, height + 4))
         pygame.draw.rect(screen, (255, 255, 255), (self.x, self.y), (width, height))
+
+# More specific classes
+        
+# Basic text
+class Text(Item):
+
+    def draw_item(self, screen):
+        # Draw the card
+        super().draw_item(screen)
+
+        # Draw the text
+        text = self.font.render(self.data.text, True, (0, 0, 0))
+        screen.blit(text, (self.x + 10, self.y + 10))
+
+# Todo List
+class Todo(Item):
+
+    def draw_item(self, screen):
+        # Draw the card
+        super().draw_item(screen)
+
+        pass
+
+# Link to a website
+class Link(Item):
+
+    def draw_item(self, screen):
+        # Draw the card
+        super().draw_item(screen)
+
+        pass
+
+# Link to another board
+class BoardLink(Item):
+
+    def draw_item(self, screen):
+        # Draw the card
+        super().draw_item(screen)
+
+        pass
