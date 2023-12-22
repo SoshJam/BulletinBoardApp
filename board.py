@@ -38,13 +38,13 @@ class Board:
         board_obj = json.loads(contents)
 
         # Extract values
-        self.display_name = board_obj.title
+        self.display_name = board_obj['title']
 
         # Items
-        for item in board_obj.items:
+        for item in board_obj['items']:
 
             # Convert the item object into an item
-            match item.type:
+            match item['type']:
                 case "text":
                     self.items.append(Text(item))
                 case "todo":
@@ -57,6 +57,10 @@ class Board:
                     raise BoardLoadingException(f"Invalid item type '{item.type}'.")
                 case _:
                     raise BoardLoadingException(f"Invalid item type '{item.type}'.")
+                
+    # Return the items
+    def getItems(self):
+        return self.items
         
 class BoardLoadingException(Exception):
     pass

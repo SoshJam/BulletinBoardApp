@@ -35,6 +35,17 @@ def main():
         # Draw the screen
         screen.fill((255, 255, 255))
 
+        # Draw the grid
+        for x in range(0, screen.get_width(), 20):
+            for y in range(0, screen.get_height(), 20):
+                pygame.draw.circle(screen, (200, 200, 200), (x, y), 1)
+
+        # Draw the items
+        for item in board.getItems():
+            item.draw_item(screen)
+
+        # Draw the UI
+
         # Update the display
         pygame.display.flip()
         
